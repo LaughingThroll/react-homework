@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 
 interface IButton {
   className?: string[],
-  onClick?: () => {},
+  onClick?: (е: React.MouseEvent) => void,
   children?: string | ReactElement
 } 
 
