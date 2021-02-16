@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom'
 
 import './styles/index.scss'
 
-import App from './App'
+import Shapes from './Shapes'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Shapes />
   </React.StrictMode>,
   document.getElementById('root')
 )
