@@ -1,0 +1,14 @@
+.shapes {
+  padding-top: 100px;
+  display: flex;
+  & > * {
+    flex: 0 1 50%;
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__left {
+    margin-right: 20px;
+  }
+}

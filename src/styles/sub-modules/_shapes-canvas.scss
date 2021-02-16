@@ -1,0 +1,46 @@
+.shapes-canvas {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  &--square {
+    background-color: $blue-grotto;
+  }
+
+  &--triangle {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 150px 300px 150px;
+      border-color: transparent transparent $blue-grotto transparent;
+    }
+  }
+  &--romb {
+    $romb-size: 150px;
+    position: relative;
+    &::before, 
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+    &::before {
+      top: 0;
+      border-width: 0 $romb-size $romb-size $romb-size;
+      border-color: transparent transparent $blue-grotto transparent;
+    }
+    &::after {
+      top: $romb-size;
+      border-width: $romb-size $romb-size 0 $romb-size;
+      border-color: $blue-grotto transparent transparent transparent;
+    } 
+  }
+}

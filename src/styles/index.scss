@@ -1,4 +1,10 @@
 @import '~normalize.css/normalize';
+@import 'utils/variables';
 @import 'utils/global';
+
+@import './sub-modules/button';
+@import './sub-modules/list-shapes';
+@import './sub-modules/shapes-canvas';
+@import './modules/shapes';
 
 

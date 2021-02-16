@@ -1,0 +1,18 @@
+.button {
+  position: relative;
+  min-width: 150px;
+  padding: 10px;
+  background-color: $blue-green;
+  border-radius: 10px;
+  box-shadow: 0 2px 0 1px darken($blue-green, 10%);
+  transition: background-color $fast linear;
+
+  &:active {
+    top: 2px;
+    box-shadow: 0 0 0 0 darken($blue-green, 10%);
+  }
+
+  &:hover {
+    background-color: lighten($blue-green, 10%);
+  }
+}
