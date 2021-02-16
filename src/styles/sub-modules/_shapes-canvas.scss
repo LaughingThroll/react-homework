@@ -9,7 +9,7 @@
   &--triangle {
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -22,8 +22,9 @@
   }
   &--romb {
     $romb-size: 150px;
+
     position: relative;
-    &::before, 
+    &::before,
     &::after {
       content: "";
       position: absolute;
@@ -41,6 +42,6 @@
       top: $romb-size;
       border-width: $romb-size $romb-size 0 $romb-size;
       border-color: $blue-grotto transparent transparent transparent;
-    } 
+    }
   }
 }

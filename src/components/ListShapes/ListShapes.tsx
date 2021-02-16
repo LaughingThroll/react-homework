@@ -2,12 +2,17 @@ import React from 'react'
 
 import ListShapesItem from './ListShapesItem'
 
-import { IShapesState, IShape } from './../../types'
+import { IShape, TShape } from './../../types'
 
-const ListShapes = ({ shapes }: IShapesState ) => {
+interface IListShapes {
+  shapes: IShape[]
+  setCurrentShape: (shape: TShape) => void
+} 
+
+const ListShapes = ({ shapes, setCurrentShape }: IListShapes ) => {
   return (
     <ul className="shapes__list list-shapes">
-      {shapes.map(({ id, type }: IShape) => <ListShapesItem key={id} type={type} />) }
+      {shapes.map(({ id, type }: IShape) => <ListShapesItem key={id} type={type} setCurrentShape={setCurrentShape} />) }
     </ul>
   )
 }
