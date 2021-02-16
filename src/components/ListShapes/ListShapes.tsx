@@ -2,10 +2,12 @@ import React from 'react'
 
 import ListShapesItem from './ListShapesItem'
 
-const ListShapes = ({ shapes }: any) => {
+import { IShapesState, IShape } from './../../types'
+
+const ListShapes = ({ shapes }: IShapesState ) => {
   return (
     <ul className="shapes__list list-shapes">
-      {shapes.map(({ id, type }: any) => <ListShapesItem key={id} type={type} />) }
+      {shapes.map(({ id, type }: IShape) => <ListShapesItem key={id} type={type} />) }
     </ul>
   )
 }

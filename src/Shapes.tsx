@@ -3,7 +3,12 @@ import React, { Component } from 'react'
 import ListShapes from './components/ListShapes/ListShapes'
 import ShapesCanvas from './components/ShapesCanvas'
 
-class Shapes extends Component {
+import { IShapesState } from './types'
+
+
+
+
+class Shapes extends Component<{}, IShapesState> {
   state = {
     shapes: [
       {
@@ -39,3 +44,5 @@ class Shapes extends Component {
 }
 
 export default Shapes
+
+
